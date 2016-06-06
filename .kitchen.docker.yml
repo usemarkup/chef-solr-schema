@@ -1,0 +1,16 @@
+---
+driver:
+  name: docker
+  privileged: true
+
+platforms:
+  - name: centos-6.7
+    driver_config:
+      platform: rhel
+      provision_command:
+        - yum install -y initscripts net-tools
+  - name: centos-7.0
+    driver_config:
+      platform: rhel
+      provision_command:
+        - yum install -y initscripts net-tools
