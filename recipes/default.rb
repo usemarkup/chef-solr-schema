@@ -16,7 +16,7 @@ node['solr_schema']['schema'].each do |name, schema|
     cookbook schema['cookbook']
     source schema['file']
     owner node['solr_schema']['user']
-    mode '0600'
+    mode '0666'
     notifies :reload, resources(:service => 'solr'), :delayed unless solr_resource_not_found
     action :create
   end
