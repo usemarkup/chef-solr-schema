@@ -1,6 +1,6 @@
 directory node['solr_schema']['path'] do
   owner node['solr_schema']['user']
-  mode '0600'
+  mode '0666'
   action :create
 end
 
